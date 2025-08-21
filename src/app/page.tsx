@@ -17,7 +17,7 @@ export default function Home() {
     if (isHydrated) {
       if (!isAuthenticated) {
         setRedirecting(true);
-        router.push("/login");
+        router.push("/");
       }
     }
   }, [isAuthenticated, isHydrated, router]);

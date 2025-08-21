@@ -97,6 +97,10 @@ export const LoginForm = () => {
             {loading ? "Cargando..." : "Iniciar sesión"}
           </Button>
         </form>
+        <div>
+          <p>usuario: admin@correo.com</p>
+          <p>contraseña: 1234</p>
+        </div>
       </CardContent>
     </Card>
   );

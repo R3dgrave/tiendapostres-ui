@@ -16,19 +16,11 @@ export default function Home() {
   useEffect(() => {
     if (isHydrated) {
       if (!isAuthenticated) {
-        setRedirecting(true);
+        setRedirecting(false);
         router.push("/");
       }
     }
   }, [isAuthenticated, isHydrated, router]);
-
-  if (!isHydrated || redirecting) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
-        <p>Cargando...</p>
-      </div>
-    );
-  }
 
   return <PublicInterface />;
 }
